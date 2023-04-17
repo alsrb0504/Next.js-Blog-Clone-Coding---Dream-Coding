@@ -1,5 +1,5 @@
 // "use client";
-`use client`; // Next.js does not recognize use client..
+`use client`; // Next.js 13 does not recognize use client..
 
 import { Post } from "@/service/posts";
 import { useState } from "react";
