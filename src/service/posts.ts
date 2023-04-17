@@ -24,3 +24,9 @@ export async function getAllPosts(): Promise<Post[]> {
     .then<Post[]>(JSON.parse)
     .then((posts) => posts.sort((a, b) => (a.date > b.date ? -1 : 1)));
 }
+
+export async function getCategoryPosts(cate: string): Promise<Post[]> {
+  return getAllPosts().then((posts) =>
+    posts.filter((post) => post.category === cate)
+  );
+}
