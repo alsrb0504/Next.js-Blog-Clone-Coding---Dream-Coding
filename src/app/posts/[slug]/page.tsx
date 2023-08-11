@@ -1,3 +1,4 @@
+import MarkdownViewer from "@/components/MarkdownViewer";
 import { getPostData } from "@/service/posts";
 import React from "react";
 
@@ -13,7 +14,7 @@ export default async function PostPage({ params: { slug } }: Props) {
   return (
     <>
       <h2>{post.title}</h2>
-      <pre>{post.content}</pre>
+      <MarkdownViewer content={post.content} />
     </>
   );
 }
