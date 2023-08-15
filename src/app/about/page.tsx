@@ -1,6 +1,11 @@
 import Hero from "@/components/Hero";
 import React from "react";
 
+export const metadata = {
+  title: "About Me",
+  description: "나의 커리어 소개",
+};
+
 const TITLE_CLASS = "text-2xl font-bold text-gray-800 my-2";
 
 export default function AboutPage() {
